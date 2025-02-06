@@ -3,8 +3,8 @@ import Card from '@/components/Card';
 export default function Home() {
 	return (
 		<div className="flex min-h-screen justify-center py-20 px-6 bg-[#F2F2F2] text-[#4D4F62] font-poppins">
-			<main className="flex flex-col gap-10">
-				<section className="text-center flex flex-col gap-4">
+			<main className="flex flex-col gap-16">
+				<section className="text-center flex flex-col gap-">
 					<h1 className="tracking-[0.17px] font-extralight text-2xl md:tracking-[0.25px] md:text-[36px]">
 						Reliable, efficient delivery
 						<br />
