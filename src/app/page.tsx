@@ -1,101 +1,53 @@
-import Image from "next/image";
+import Card from '@/components/Card';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<div className="flex min-h-screen justify-center py-20 px-6 bg-[#F2F2F2] text-[#4D4F62] font-poppins">
+			<main className="flex flex-col gap-10">
+				<section className="text-center flex flex-col gap-4">
+					<h1 className="tracking-[0.17px] font-extralight text-2xl md:tracking-[0.25px] md:text-[36px]">
+						Reliable, efficient delivery
+						<br />
+						<span className="font-semibold mt-[1px]">
+							Powered by Technology
+						</span>
+					</h1>
+					<p className="leading-[25px] text-[15px] opacity-50 tracking-[0.1px] max-w-[540px] mx-auto">
+						Our Artificial Intelligence powered tools use millions of project
+						data points to ensure that your project is successful
+					</p>
+				</section>
+				<section className="grid md:grid-cols-3 md:grid-rows-4 gap-6 mx-auto">
+					<Card
+						title="Supervisor"
+						description="Monitors activity to identify project roadblocks"
+						image="/images/icon-supervisor.svg"
+						border="border-t-[#44D3D2]"
+						gridPlacement="md:col-start-1 md:row-start-2 md:row-span-2"
+					/>
+					<Card
+						title="Team Builder"
+						description="Scans our talent network to create the optimal team for your project"
+						image="/images/icon-team-builder.svg"
+						border="border-t-[#EA7C69]"
+						gridPlacement="md:col-start-2 md:row-start-1 md:row-span-2"
+					/>
+					<Card
+						title="Karma"
+						description="Regularly evaluates our talent to ensure quality"
+						image="/images/icon-karma.svg"
+						border="border-t-[#FFB428]"
+						gridPlacement="md:col-start-2 md:row-start-3 md:row-span-2"
+					/>
+					<Card
+						title="Calculator"
+						description="Uses data from past projects to provide better delivery estimates"
+						image="/images/icon-calculator.svg"
+						border="border-t-[#549EF2]"
+						gridPlacement="md:col-start-3 md:row-start-2 md:row-span-2"
+					/>
+				</section>
+			</main>
+		</div>
+	);
 }
