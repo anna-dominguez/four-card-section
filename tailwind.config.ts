@@ -10,7 +10,7 @@ export default {
 		extend: {
 			colors: {},
 			fontFamily: {
-				sans: ['Poppins', 'sans-serif'],
+				sans: ['var(--font-poppins)'],
 			},
 		},
 	},

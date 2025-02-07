@@ -2,15 +2,13 @@ import Card from '@/components/Card';
 
 export default function Home() {
 	return (
-		<div className="flex min-h-screen justify-center py-20 px-6 bg-[#F2F2F2] text-[#4D4F62] font-poppins">
+		<div className="flex min-h-screen justify-center py-20 px-6 bg-[#f7f7f7] text-[#4D4F62]">
 			<main className="flex flex-col gap-16">
-				<section className="text-center flex flex-col gap-">
-					<h1 className="tracking-[0.17px] font-extralight text-2xl md:tracking-[0.25px] md:text-[36px]">
+				<section className="text-center flex flex-col gap-4">
+					<h1 className="tracking-[0.17px] font-extralight text-2xl md:tracking-[0.25px] md:text-[36px] flex flex-col">
 						Reliable, efficient delivery
 						<br />
-						<span className="font-semibold mt-[1px]">
-							Powered by Technology
-						</span>
+						<span className="font-semibold mt-4">Powered by Technology</span>
 					</h1>
 					<p className="leading-[25px] text-[15px] opacity-50 tracking-[0.1px] max-w-[540px] mx-auto">
 						Our Artificial Intelligence powered tools use millions of project
